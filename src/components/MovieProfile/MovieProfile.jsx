@@ -12,6 +12,7 @@ import {
   TextWrap,
   Wrap,
 } from './MovieProfile.styled';
+import PropTypes from 'prop-types';
 
 export const MovieProfile = ({
   details: { poster_path, title, name, vote_average, overview, genres },
@@ -45,4 +46,17 @@ export const MovieProfile = ({
       </AddSide>
     </Section>
   );
+};
+MovieProfile.propTypes = {
+  details: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    poster_path: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    vote_average: PropTypes.number.isRequired,
+    overview: PropTypes.number.isRequired,
+    genres: PropTypes.arrayOf({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+    }),
+  }),
 };

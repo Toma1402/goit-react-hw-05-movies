@@ -44,7 +44,9 @@ export const Cast = () => {
             </ImageThumb>
             <CastActorInfo>
               <h4>{person.name}</h4>
-              <Character>Character: {person.character}</Character>
+              <Character>
+                Character: {person.character ? person.character : 'unknown'}
+              </Character>
             </CastActorInfo>
           </CastItem>
         ))
