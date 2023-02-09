@@ -1,6 +1,6 @@
-import { StyledLink, TrendsList, TrendsItem } from './TrendingList.styled';
+import { StyledLink, TrendsList, TrendsItem } from './MovieList.styled';
 
-export const TrendingList = ({ trends }) => {
+export const MovieList = ({ trends }) => {
   return (
     <TrendsList>
       {trends.map(({ id, title, name }) => (

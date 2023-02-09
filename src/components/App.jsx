@@ -1,9 +1,9 @@
 import { Route, Routes } from 'react-router';
-import { SharedLayout } from './SharedLayout';
+import { SharedLayout } from './SharedLayout/SharedLayout';
 import { Home } from 'pages/Home';
 import { MovieDetails } from 'pages/MovieDetails';
-import { Cast } from './Cast';
-import { Reviews } from './Reviews';
+import { Cast } from './Cast/Cast';
+import { Reviews } from './Reviews/Reviews';
 import { Movies } from 'pages/Movies';
 
 export const App = () => {

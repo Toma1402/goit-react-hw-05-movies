@@ -5,6 +5,7 @@ import {
   StyledLink,
   Header,
   Navigation,
+  HeaderIcon,
 } from './SharedLayout.styled';
 
 export const SharedLayout = () => {
@@ -12,6 +13,7 @@ export const SharedLayout = () => {
     <Container>
       <Header>
         <Navigation>
+          <HeaderIcon />
           <StyledLink to="/">Home</StyledLink>
           <StyledLink to="/movies">Movies</StyledLink>
         </Navigation>

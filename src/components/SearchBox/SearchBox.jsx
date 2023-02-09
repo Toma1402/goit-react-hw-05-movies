@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { SearchBtn, SearchForm, StyledInput } from './SearchBox.styled';
 
 export const SearchBox = ({ onSubmit }) => {
   const [query, setQuery] = useState('');
@@ -10,8 +11,8 @@ export const SearchBox = ({ onSubmit }) => {
     onSubmit(query);
   };
   return (
-    <form onClick={handleSubmit}>
-      <input
+    <SearchForm onClick={handleSubmit}>
+      <StyledInput
         type="text"
         placeholder="Enter name movie"
         onChange={handleInput}
@@ -19,7 +20,7 @@ export const SearchBox = ({ onSubmit }) => {
         autoFocus
         value={query}
       />
-      <button type="submit">Search</button>
-    </form>
+      <SearchBtn type="submit">Search</SearchBtn>
+    </SearchForm>
   );
 };

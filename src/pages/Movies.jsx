@@ -1,8 +1,9 @@
-import { SearchBox } from 'components/SearchBox';
+import { SearchBox } from 'components/SearchBox/SearchBox';
 import { fetchSearchedMovies } from 'helpers/API';
 import { useEffect, useState } from 'react';
-import { SearchedMovie } from 'components/SearchedMovie';
 import { useSearchParams } from 'react-router-dom';
+import { MovieList } from 'components/MovieList/MovieList';
+import { MoviePage } from './Movies.styled';
 
 export const Movies = () => {
   const [searchMovies, setSearchMovies] = useState([]);
@@ -24,9 +25,9 @@ export const Movies = () => {
     setSearchParams(nextParams);
   };
   return (
-    <div>
+    <MoviePage>
       <SearchBox onSubmit={handleSearch} />
-      <SearchedMovie movies={searchMovies} />
-    </div>
+      <MovieList trends={searchMovies} />
+    </MoviePage>
   );
 };

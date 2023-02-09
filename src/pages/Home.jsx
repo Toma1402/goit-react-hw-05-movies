@@ -1,4 +1,5 @@
-import { TrendingList } from 'components/TrendingList';
+import { MovieList } from 'components/MovieList/MovieList';
+import { TrendPage } from 'components/MovieList/MovieList.styled';
 import { fetchTrendingMovies } from 'helpers/API';
 import { useState, useEffect } from 'react';
 
@@ -18,8 +19,10 @@ export const Home = () => {
   }, []);
   return (
     <main>
-      <h1>Trending today</h1>
-      <TrendingList trends={movies} />
+      <TrendPage>
+        <h1>Trending today:</h1>
+        <MovieList trends={movies} />
+      </TrendPage>
     </main>
   );
 };
