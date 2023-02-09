@@ -4,8 +4,6 @@ import { NavLink, Outlet } from 'react-router-dom';
 export const MovieProfile = ({
   details: { poster_path, title, name, vote_average, overview, genres },
 }) => {
-  console.log(genres);
-
   return (
     <div>
       <div>

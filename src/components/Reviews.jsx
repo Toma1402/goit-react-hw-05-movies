@@ -4,23 +4,27 @@ import { useParams } from 'react-router';
 
 export const Reviews = () => {
   const [reviews, setReview] = useState([]);
-  const { id } = useParams();
+  const { movieId } = useParams();
   useEffect(() => {
     const getReview = async () => {
-      const content = await fetchReviews(id);
+      const content = await fetchReviews(movieId);
       setReview(content);
     };
     getReview();
-  }, [id]);
+  }, [movieId]);
   return (
     <div>
       <ul>
-        {reviews.map(review => (
-          <li key={review.author}>
-            <h4>{review.author}</h4>
-            <p>{review.content}</p>
-          </li>
-        ))}
+        {reviews.length > 0 ? (
+          reviews.map(review => (
+            <li key={review.author}>
+              <h4>{review.author}</h4>
+              <p>{review.content}</p>
+            </li>
+          ))
+        ) : (
+          <p>There is no reviews about this film</p>
+        )}
       </ul>
     </div>
   );

@@ -5,20 +5,20 @@ import { MovieProfile } from 'components/MovieProfile';
 import { BackClick } from 'components/BackClick';
 
 export const MovieDetails = () => {
-  const { id } = useParams('');
+  const { movieId } = useParams('');
   const [movieById, setMovieById] = useState({});
   useEffect(() => {
     const getMovie = async () => {
       try {
-        const movieById = await fetchTrendMovieById(id);
+        const movieById = await fetchTrendMovieById(movieId);
         setMovieById(movieById);
       } catch (err) {
         console.log(err);
       }
     };
     getMovie();
-  }, [id]);
-  console.log(movieById);
+  }, [movieId]);
+
   return (
     <>
       <BackClick />

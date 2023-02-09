@@ -10,7 +10,6 @@ export const Home = () => {
       try {
         const arr = await fetchTrendingMovies();
         setMovies(arr);
-        console.log(arr);
       } catch (err) {
         console.log(err);
       }
