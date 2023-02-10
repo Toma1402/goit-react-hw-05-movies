@@ -1,11 +1,12 @@
 import { Route, Routes } from 'react-router';
 import { SharedLayout } from './SharedLayout/SharedLayout';
-import { Home } from 'pages/Home';
+
 import { MovieDetails } from 'pages/MovieDetails';
 import { Cast } from './Cast/Cast';
 import { Reviews } from './Reviews/Reviews';
 import { Movies } from 'pages/Movies';
-
+import { lazy } from 'react';
+import { Home } from 'pages/Home';
 export const App = () => {
   return (
     <Routes>

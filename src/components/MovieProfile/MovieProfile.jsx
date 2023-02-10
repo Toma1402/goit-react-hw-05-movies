@@ -13,6 +13,7 @@ import {
   Wrap,
 } from './MovieProfile.styled';
 import PropTypes from 'prop-types';
+import { Suspense } from 'react';
 
 export const MovieProfile = ({
   details: { poster_path, title, name, vote_average, overview, genres },
@@ -42,7 +43,9 @@ export const MovieProfile = ({
             <StyledLink to="reviews">Reviews</StyledLink>
           </AddItem>
         </AddList>
-        <Outlet />
+        <Suspense>
+          <Outlet />
+        </Suspense>
       </AddSide>
     </Section>
   );

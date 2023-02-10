@@ -15,9 +15,9 @@ export const MovieList = ({ trends }) => {
 MovieList.propTypes = {
   trends: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
+      id: PropTypes.number,
+      title: PropTypes.string,
+      name: PropTypes.string,
     })
   ),
 };
