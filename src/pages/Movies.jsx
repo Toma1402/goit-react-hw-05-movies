@@ -5,7 +5,7 @@ import { useSearchParams } from 'react-router-dom';
 import { MovieList } from 'components/MovieList/MovieList';
 import { MoviePage } from './Movies.styled';
 
-export const Movies = () => {
+const Movies = () => {
   const [searchMovies, setSearchMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const movieName = searchParams.get('query') ?? '';
@@ -31,3 +31,4 @@ export const Movies = () => {
     </MoviePage>
   );
 };
+export default Movies;

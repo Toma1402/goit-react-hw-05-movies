@@ -12,7 +12,7 @@ import {
   ImageThumb,
 } from './Cast.styled';
 
-export const Cast = () => {
+const Cast = () => {
   const [castInfo, setCastInfo] = useState([]);
   const { movieId } = useParams();
 
@@ -56,3 +56,4 @@ export const Cast = () => {
     </CastList>
   );
 };
+export default Cast;

@@ -4,7 +4,7 @@ import { useParams } from 'react-router';
 import { MovieProfile } from 'components/MovieProfile/MovieProfile';
 import { BackClick } from 'components/BackClick';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const { movieId } = useParams('');
   const [movieById, setMovieById] = useState({});
   useEffect(() => {
@@ -26,3 +26,4 @@ export const MovieDetails = () => {
     </>
   );
 };
+export default MovieDetails;

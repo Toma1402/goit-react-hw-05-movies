@@ -3,7 +3,7 @@ import { TrendPage } from 'components/MovieList/MovieList.styled';
 import { fetchTrendingMovies } from 'helpers/API';
 import { useState, useEffect } from 'react';
 
-export const Home = () => {
+const Home = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -26,3 +26,4 @@ export const Home = () => {
     </main>
   );
 };
+export default Home;

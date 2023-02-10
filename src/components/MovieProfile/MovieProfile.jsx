@@ -43,7 +43,8 @@ export const MovieProfile = ({
             <StyledLink to="reviews">Reviews</StyledLink>
           </AddItem>
         </AddList>
-        <Suspense>
+
+        <Suspense fallback={<div>Loading</div>}>
           <Outlet />
         </Suspense>
       </AddSide>
@@ -52,14 +53,10 @@ export const MovieProfile = ({
 };
 MovieProfile.propTypes = {
   details: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    poster_path: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    vote_average: PropTypes.number.isRequired,
-    overview: PropTypes.number.isRequired,
-    genres: PropTypes.arrayOf({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-    }),
+    title: PropTypes.string,
+    poster_path: PropTypes.string,
+    name: PropTypes.string,
+    vote_average: PropTypes.number,
+    overview: PropTypes.string,
   }),
 };
