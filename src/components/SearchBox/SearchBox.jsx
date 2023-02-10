@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { SearchBtn, SearchForm, StyledInput } from './SearchBox.styled';
+import PropTypes from 'prop-types';
 
 export const SearchBox = ({ onSubmit }) => {
   const [query, setQuery] = useState('');
@@ -23,4 +24,8 @@ export const SearchBox = ({ onSubmit }) => {
       <SearchBtn type="submit">Search</SearchBtn>
     </SearchForm>
   );
+};
+
+SearchBox.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 };
