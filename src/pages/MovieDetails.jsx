@@ -1,12 +1,14 @@
 import { fetchTrendMovieById } from 'helpers/API';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useLocation, useParams } from 'react-router';
 import { MovieProfile } from 'components/MovieProfile/MovieProfile';
 import { BackClick } from 'components/BackClick';
 
 const MovieDetails = () => {
   const { movieId } = useParams('');
   const [movieById, setMovieById] = useState({});
+  const location = useLocation();
+  const backLinkHref = location.state?.from ?? '/movies';
   useEffect(() => {
     const getMovie = async () => {
       try {
@@ -21,7 +23,7 @@ const MovieDetails = () => {
 
   return (
     <>
-      <BackClick />
+      <BackClick to={backLinkHref} />
       {movieById && <MovieProfile details={movieById} />}
     </>
   );

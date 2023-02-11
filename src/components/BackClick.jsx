@@ -14,10 +14,10 @@ const StyledLink = styled(NavLink)`
   border: 1px solid grey;
 `;
 
-export const BackClick = () => {
+export const BackClick = ({ to }) => {
   return (
     <>
-      <StyledLink to="/">Go back</StyledLink>
+      <StyledLink to={to}>Go back</StyledLink>
     </>
   );
 };
