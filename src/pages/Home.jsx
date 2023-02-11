@@ -16,6 +16,9 @@ const Home = () => {
       }
     };
     getTrends();
+    /*  return () => {
+      contr.abort();
+    }; */
   }, []);
   return (
     <main>
